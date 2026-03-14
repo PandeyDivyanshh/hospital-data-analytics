@@ -1,0 +1,39 @@
+# Virtual Environments
+venv/
+myvenv/
+.venv/
+env/
+
+# Environment Variables / Credentials
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# ChromaDB local store
+data/chromadb_store/
+
+# Test files
+test_groq.py
+test_api.py
