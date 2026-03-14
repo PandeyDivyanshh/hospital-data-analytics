@@ -16,7 +16,12 @@ import visualization as viz
 # Set page config
 st.set_page_config(page_title="Hospital Analytics Dashboard", page_icon="🏥", layout="wide")
 
-API_BASE_URL = "http://127.0.0.1:8000"
+# Use Streamlit secrets or env var for production, fallback to localhost
+API_BASE_URL = os.getenv("API_BASE_URL", "http://127.0.0.1:8000")
+try:
+    API_BASE_URL = st.secrets.get("API_BASE_URL", API_BASE_URL)
+except Exception:
+    pass
 
 # ── Helper Functions ─────────────────────────────────────────────────────────
 @st.cache_data(ttl=30)
